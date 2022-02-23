@@ -7,6 +7,7 @@
   [show-button]="false"
 ></app-page-header>
 
+
 <div class="card">
   <div class="card-header">
     Selecione o Mês e Ano para gerar os relatórios
@@ -63,7 +64,7 @@
     </div>
     <div class="card-body">
       <h3 class="card-title">
-        1500
+        {{revenueTotal}}
       </h3>
     </div>
   </div>
@@ -74,7 +75,7 @@
     </div>
     <div class="card-body">
       <h3 class="card-title">
-        500
+        {{expenseTotal}}
       </h3>
     </div>
   </div>
@@ -85,7 +86,7 @@
     </div>
     <div class="card-body">
       <h3 class="card-title">
-        1000
+        {{balance}}
       </h3>
     </div>
   </div>
@@ -95,10 +96,10 @@
 
 <div class="row mt-5 mb-4">
   <div class="col-md-6">
-    GRAFICO DE RECEITAS
+    <p-chart type="bar" [data]="revenueChartData" [options]="chartOptions"></p-chart>
   </div>
 
   <div class="col-md-6">
-    GRÁFICO DE DESPESAS
+    <p-chart type="bar" [data]="expenseChartData" [options]="chartOptions"></p-chart>
   </div>
 </div>
